@@ -1,0 +1,65 @@
+{
+  "name": "etherscan-ts",
+  "version": "0.0.0",
+  "description": "Ethersdcan API library with typescript",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/???.git"
+  },
+  "bugs": {
+    "url": "https://github.com/???/issues"
+  },
+  "homepage": "https://github.com/???",
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/!(*.queries).ts": [
+      "yarn prettier",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-jest": "^24.3.5",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "ts-node-dev": "^1.1.6",
+    "tsutils": "^3.21.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "dev": "yarn prettier && ts-node-dev src/main.ts --trace-sync-io",
+    "test": "jest",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "prettier": "prettier --write --config .prettierrc ./src///*.ts && prettier --write --config .prettierrc ./test///*.ts",
+    "build": "tsc",
+    "prebuild": "rimraf ./dist"
+  },
+  "author": "CuteWisp <sweatpotato13@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "tslib": "^2.2.0"
+  },
+  "volta": {
+    "node": "12.18.3",
+    "npm": "6.14.5"
+  }
+}
