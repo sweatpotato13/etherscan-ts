@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to etherscan-ts 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/sweatpotato13/etherscan-ts" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -13,12 +13,11 @@
 
 ### 🏠 [Homepage](https://github.com/sweatpotato13/etherscan-ts)
 
-### ✨ [Demo](https://github.com/sweatpotato13/etherscan-ts)
-
 ## Install
 
 ```sh
-yarn install
+npm i etherscan-ts
+yarn add etherscan-ts
 ```
 
 ## Run tests
