@@ -1,1 +1,3 @@
-console.log("Hello world");
+import "./Services/etherscan"
+
+export * from "./Services/etherscan";
