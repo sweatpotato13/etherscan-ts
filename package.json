@@ -6,12 +6,12 @@
   "types": "./dist/src/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/???.git"
+    "url": "https://github.com/sweatpotato13/etherscan-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/???/issues"
+    "url": "https://github.com/sweatpotato13/etherscan-ts/issues"
   },
-  "homepage": "https://github.com/???",
+  "homepage": "https://github.com/sweatpotato13/etherscan-ts",
   "files": [
     "dist"
   ],
@@ -45,7 +45,7 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "dev": "yarn prettier && ts-node-dev src/main.ts --trace-sync-io",
+    "dev": "ts-node-dev src/main.ts --trace-sync-io",
     "test": "jest",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "prettier": "prettier --write --config .prettierrc ./src///*.ts && prettier --write --config .prettierrc ./test///*.ts",
