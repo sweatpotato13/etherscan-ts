@@ -1,4 +1,5 @@
 import fetch from "node-fetch"
+import { IResponse } from "src/Interfaces/response.interface";
 
 export class Etherscan {
     private apiKey: string;
@@ -11,7 +12,7 @@ export class Etherscan {
         }
     }
     /* Accounts */
-    public async getSingleEtherBalance(address: string): Promise<any> {
+    public async getSingleEtherBalance(address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -20,7 +21,7 @@ export class Etherscan {
         }
     }
 
-    public async getMultipleEtherBalance(addresses: string[]): Promise<any> {
+    public async getMultipleEtherBalance(addresses: string[]): Promise<IResponse> {
         try {
             if (addresses.length > 20) {
                 throw new Error(`maxium of 20 accounts in a single batch`);
@@ -32,7 +33,7 @@ export class Etherscan {
         }
     }
 
-    public async getTrxList(address: string, startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<any> {
+    public async getTrxList(address: string, startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=txlist&address=${address}&startblock=${startblock}&endblock=${endblock}&page=${page}&offset=${offset}&sort=${sort}}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -41,7 +42,7 @@ export class Etherscan {
         }
     }
 
-    public async getInternalTrxListByAddress(address: string, startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<any> {
+    public async getInternalTrxListByAddress(address: string, startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=txlistinternal&address=${address}&startblock=${startblock}&endblock=${endblock}&page=${page}&offset=${offset}&sort=${sort}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -50,7 +51,7 @@ export class Etherscan {
         }
     }
 
-    public async getInternalTrxListByHash(txHash: string): Promise<any> {
+    public async getInternalTrxListByHash(txHash: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=txlistinternal&txhash=${txHash}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -59,7 +60,7 @@ export class Etherscan {
         }
     }
 
-    public async getInternalTrxListByBlockRange(startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<any> {
+    public async getInternalTrxListByBlockRange(startblock: number, endblock: number, page: number, offset: number, sort: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=txlistinternal&startblock=${startblock}&endblock=${endblock}&page=${page}&offset=${offset}&sort=${sort}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -68,7 +69,7 @@ export class Etherscan {
         }
     }
 
-    public async getERC20TokenTransferEventList(contractAddress: string, address: string, page: number, offset: number, sort: string): Promise<any> {
+    public async getERC20TokenTransferEventList(contractAddress: string, address: string, page: number, offset: number, sort: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=tokentx&contractaddress=${contractAddress}&address=${address}&page=${page}&offset=${offset}&sort=${sort}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -77,7 +78,7 @@ export class Etherscan {
         }
     }
 
-    public async getERC721TokenTransferEventList(contractAddress: string, address: string, page: number, offset: number, sort: string): Promise<any> {
+    public async getERC721TokenTransferEventList(contractAddress: string, address: string, page: number, offset: number, sort: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=tokennfttx&contractaddress=${contractAddress}&address=${address}&page=${page}&offset=${offset}&sort=${sort}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -86,7 +87,7 @@ export class Etherscan {
         }
     }
 
-    public async getMinedBlocksByAddress(address: string, type: string, page: number, offset: number): Promise<any> {
+    public async getMinedBlocksByAddress(address: string, type: string, page: number, offset: number): Promise<IResponse> {
         try {
             if (type !== "blocks" && type !== "uncles") {
                 throw new Error(`Wrong block type`);
@@ -99,7 +100,7 @@ export class Etherscan {
     }
 
     /* Contracts */
-    public async getContractAbi(address: string): Promise<any> {
+    public async getContractAbi(address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=contract&action=getabi&address=${address}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -109,7 +110,7 @@ export class Etherscan {
     }
 
     /* Transactions */
-    public async checkContractExecutionStatus(txHash: string): Promise<any> {
+    public async checkContractExecutionStatus(txHash: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=transaction&action=getstatus&txhash=${txHash}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -118,7 +119,7 @@ export class Etherscan {
         }
     }
 
-    public async checkTransactionReceiptStatus(txHash: string): Promise<any> {
+    public async checkTransactionReceiptStatus(txHash: string): Promise<IResponse> {
         // Only applicable for Post Byzantium fork transactions
         try {
             const url = `${this.apiUrl}?module=transaction&action=gettxreceiptstatus&txhash=${txHash}&apikey=${this.apiKey}`
@@ -129,7 +130,7 @@ export class Etherscan {
     }
 
     /* Blocks */
-    public async getBlockandUncleReward(blockNo: number): Promise<any> {
+    public async getBlockandUncleReward(blockNo: number): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=block&action=getblockreward&blockno=${blockNo}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -138,7 +139,7 @@ export class Etherscan {
         }
     }
 
-    public async getEstimatedBlockCountdownTime(blockNo: number): Promise<any> {
+    public async getEstimatedBlockCountdownTime(blockNo: number): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=block&action=getblockcountdown&blockno=${blockNo}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -147,7 +148,7 @@ export class Etherscan {
         }
     }
 
-    public async getBlockNumberByTimestamp(timestamp: number, closest: string): Promise<any> {
+    public async getBlockNumberByTimestamp(timestamp: number, closest: string): Promise<IResponse> {
         if (closest !== "before" && closest !== "after") {
             throw new Error(`Wrong parameter`);
         }
@@ -160,7 +161,7 @@ export class Etherscan {
     }
 
     /* Geth/Parity Proxy */
-    public async getRecentBlockNumber(): Promise<any> {
+    public async getRecentBlockNumber(): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_blockNumber&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -169,7 +170,7 @@ export class Etherscan {
         }
     }
 
-    public async getBlockbyNumber(blockNumber: string): Promise<any> {
+    public async getBlockbyNumber(blockNumber: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getBlockByNumber&tag=${blockNumber}&boolean=true&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -178,7 +179,7 @@ export class Etherscan {
         }
     }
 
-    public async getUncleByBlockNumberAndIndex(blockNumber: string, index: string): Promise<any> {
+    public async getUncleByBlockNumberAndIndex(blockNumber: string, index: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getUncleByBlockNumberAndIndex&tag=${blockNumber}&index=${index}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -187,7 +188,7 @@ export class Etherscan {
         }
     }
 
-    public async getBlockTransactionCountByNumber(blockNumber: string): Promise<any> {
+    public async getBlockTransactionCountByNumber(blockNumber: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getBlockTransactionCountByNumber&tag=${blockNumber}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -196,7 +197,7 @@ export class Etherscan {
         }
     }
 
-    public async getTransactionByHash(txHash: string): Promise<any> {
+    public async getTransactionByHash(txHash: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionByHash&txhash=${txHash}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -205,7 +206,7 @@ export class Etherscan {
         }
     }
 
-    public async getTransactionByBlockNumberAndIndex(blockNumber: string, index: string): Promise<any> {
+    public async getTransactionByBlockNumberAndIndex(blockNumber: string, index: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionByBlockNumberAndIndex&tag=${blockNumber}&index=${index}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -214,7 +215,7 @@ export class Etherscan {
         }
     }
 
-    public async getTransactionCount(address: string): Promise<any> {
+    public async getTransactionCount(address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionCount&address=${address}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -223,7 +224,7 @@ export class Etherscan {
         }
     }
 
-    public async sendRawTransaction(): Promise<any> {
+    public async sendRawTransaction(): Promise<IResponse> {
         try {
             throw new Error(`Not Implemented`);
         } catch (err) {
@@ -231,7 +232,7 @@ export class Etherscan {
         }
     }
 
-    public async getTransactionReceipt(txHash: string): Promise<any> {
+    public async getTransactionReceipt(txHash: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionReceipt&txhash=${txHash}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -240,7 +241,7 @@ export class Etherscan {
         }
     }
 
-    public async call(): Promise<any> {
+    public async call(): Promise<IResponse> {
         try {
             throw new Error(`Not Implemented`);
         } catch (err) {
@@ -248,7 +249,7 @@ export class Etherscan {
         }
     }
 
-    public async getCode(address: string): Promise<any> {
+    public async getCode(address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionCount&address=${address}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -257,7 +258,7 @@ export class Etherscan {
         }
     }
 
-    public async getStorageAt(address: string, position: string): Promise<any> {
+    public async getStorageAt(address: string, position: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getStorageAt&address=${address}&position=${position}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -266,7 +267,7 @@ export class Etherscan {
         }
     }
 
-    public async gasPrice(address: string): Promise<any> {
+    public async gasPrice(address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=proxy&action=eth_getTransactionCount&address=${address}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -275,7 +276,7 @@ export class Etherscan {
         }
     }
 
-    public async estimateGas(): Promise<any> {
+    public async estimateGas(): Promise<IResponse> {
         try {
             throw new Error(`Not Implemented`);
         } catch (err) {
@@ -284,7 +285,7 @@ export class Etherscan {
     }
 
     /* Tokens */
-    public async getERC20TokenTotalSupply(contractAddress: string): Promise<any> {
+    public async getERC20TokenTotalSupply(contractAddress: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -293,7 +294,7 @@ export class Etherscan {
         }
     }
 
-    public async getERC20TokenBalance(contractAddress: string, address: string): Promise<any> {
+    public async getERC20TokenBalance(contractAddress: string, address: string): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -303,7 +304,7 @@ export class Etherscan {
     }
 
     /* Gas Tracker */
-    public async estimateConfirmationTime(gasPrice: number): Promise<any> {
+    public async estimateConfirmationTime(gasPrice: number): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=gastracker&action=gasestimate&gasprice=${gasPrice}&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -312,7 +313,7 @@ export class Etherscan {
         }
     }
 
-    public async getGasOracle(): Promise<any> {
+    public async getGasOracle(): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=gastracker&action=gasoracle&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -322,7 +323,7 @@ export class Etherscan {
     }
 
     /* Stats */
-    public async getTotalEther(): Promise<any> {
+    public async getTotalEther(): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=stats&action=ethsupply&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -331,7 +332,7 @@ export class Etherscan {
         }
     }
 
-    public async getEtherLastPrice(): Promise<any> {
+    public async getEtherLastPrice(): Promise<IResponse> {
         try {
             const url = `${this.apiUrl}?module=stats&action=ethprice&apikey=${this.apiKey}`
             return this.wrapFetch(url);
@@ -341,7 +342,7 @@ export class Etherscan {
     }
 
     /* Wrap */
-    private async wrapFetch(url: string): Promise<any> {
+    private async wrapFetch(url: string): Promise<IResponse> {
         try {
             const res = await fetch(url)
             const json = await res.json();
