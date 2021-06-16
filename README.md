@@ -26,6 +26,49 @@ yarn add etherscan-ts
 yarn test
 ```
 
+## Usage
+```
+const eth = new Etherscan("apiKey");
+```
+
+You need API key from etherscan
+
+### Functions
+* getSingleEtherBalance
+* getMultipleEtherBalance
+* getTrxList
+* getInternalTrxListByAddress
+* getInternalTrxListByHash
+* getInternalTrxListByBlockRange
+* getERC20TokenTransferEventList
+* getERC721TokenTransferEventList
+* getMinedBlocksByAddress
+* getContractAbi
+* checkContractExecutionStatus
+* checkTransactionReceiptStatus
+* getBlockandUncleReward
+* getEstimatedBlockCountdownTime
+* getBlockNumberByTimestamp
+* getRecentBlockNumber
+* getBlockbyNumber
+* getUncleByBlockNumberAndIndex
+* getBlockTransactionCountByNumber
+* getTransactionByHash
+* getTransactionByBlockNumberAndIndex
+* getTransactionCount
+* sendRawTransaction
+* getTransactionReceipt
+* getCode
+* getStorageAt
+* gasPrice
+* getERC20TokenTotalSupply
+* getERC20TokenBalance
+* estimateConfirmationTime
+* getGasOracle
+* getTotalEther
+* getEtherLastPrice
+
+
 ## Author
 
 👤 **CuteWisp <sweatpotato13@gmail.com>**

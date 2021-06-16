@@ -328,7 +328,7 @@ export class Etherscan {
             const url = `${this.apiUrl}?module=stats&action=ethsupply&apikey=${this.apiKey}`
             return this.wrapFetch(url);
         } catch (err) {
-            throw new Error(`getGasOracle Error: ${err.message}`);
+            throw new Error(`getTotalEther Error: ${err.message}`);
         }
     }
 
@@ -337,7 +337,7 @@ export class Etherscan {
             const url = `${this.apiUrl}?module=stats&action=ethprice&apikey=${this.apiKey}`
             return this.wrapFetch(url);
         } catch (err) {
-            throw new Error(`getGasOracle Error: ${err.message}`);
+            throw new Error(`getEtherLastPrice Error: ${err.message}`);
         }
     }
 
