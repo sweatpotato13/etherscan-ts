@@ -69,7 +69,7 @@
     "author": "CuteWisp <sweatpotato13@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "dotenv": "^8.2.0",
+        "dotenv": "^10.0.0",
         "node-fetch": "^2.6.1",
         "tslib": "^2.2.0"
     },
