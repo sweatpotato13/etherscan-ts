@@ -34,7 +34,7 @@
         "@commitlint/cli": "^13.1.0",
         "@commitlint/config-conventional": "^13.1.0",
         "@types/jest": "^26.0.22",
-        "@types/node": "^14.14",
+        "@types/node": "^16.4",
         "@typescript-eslint/eslint-plugin": "^4.22.0",
         "@typescript-eslint/parser": "^4.22.0",
         "devmoji": "^2.3.0",
