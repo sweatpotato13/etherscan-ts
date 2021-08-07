@@ -41,7 +41,7 @@ jobs:
         yarn lint
 
   test:
-    if: github.actor != 'dependabot'
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     strategy:
       matrix:
