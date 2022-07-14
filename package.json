@@ -1,6 +1,6 @@
 {
     "name": "etherscan-ts",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Ethersdcan API library with typescript",
     "main": "./dist/src/index.js",
     "types": "./dist/src/index.d.ts",
@@ -66,6 +66,7 @@
     "author": "CuteWisp <sweatpotato13@gmail.com>",
     "license": "MIT",
     "dependencies": {
+        "axios": "^0.27.2",
         "cross-fetch": "^3.1.5",
         "dotenv": "^16.0.0",
         "tslib": "^2.3.1"
