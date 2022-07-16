@@ -1,13 +1,6 @@
 <h1 align="center">Welcome to etherscan-ts 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/sweatpotato13/etherscan-ts" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/sweatpotato13/etherscan-ts/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-</p>
+
+[![npm version](https://badge.fury.io/js/etherscan-ts.svg)](https://badge.fury.io/js/etherscan-ts)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![npm](https://img.shields.io/npm/dw/etherscan-ts.svg)
 
 > Ethersdcan API library with typescript
 
