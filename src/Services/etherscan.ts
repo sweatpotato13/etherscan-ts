@@ -1360,7 +1360,8 @@ export class Etherscan {
             const res = await axios.get(url, {
                 params: params,
             });
-            const json = await res.data();
+            const json = await res.data;
+            console.log(json);
             if (json.status !== "1") {
                 throw new Error(`Response status must to be '1'`);
             }
