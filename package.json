@@ -38,7 +38,7 @@
         "axios-mock-adapter": "^1.21.1",
         "eslint": "^8.9.0",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-jest": "^26.1.1",
+        "eslint-plugin-jest": "^27.0.4",
         "git-branch-is": "^4.0.0",
         "husky": "7.0.4",
         "jest": "^28.1.3",
