@@ -1386,19 +1386,19 @@ __metadata:
   linkType: hard
 
 "@typescript-eslint/parser@npm:^5.12.0":
-  version: 5.30.6
-  resolution: "@typescript-eslint/parser@npm:5.30.6"
+  version: 5.45.1
+  resolution: "@typescript-eslint/parser@npm:5.45.1"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.30.6
-    "@typescript-eslint/types": 5.30.6
-    "@typescript-eslint/typescript-estree": 5.30.6
+    "@typescript-eslint/scope-manager": 5.45.1
+    "@typescript-eslint/types": 5.45.1
+    "@typescript-eslint/typescript-estree": 5.45.1
     debug: ^4.3.4
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 3e02bb447d21af65adefbaddb46380ced3fb88045ef2e122d6522cc354d414898cd2222b4ce05fa0ee1fbc8c01e9a7833fe57e52b844e3fba30c89d20e006b56
+  checksum: 48704224972e67d7ecf928118d47a1eda6732afd585bb4aab6716b7d363e5d4a2e0b0f1bbb92cbef80c7dd75ede10b610e858eb0cb86a67d1866fd17d0722895
   languageName: node
   linkType: hard
 
