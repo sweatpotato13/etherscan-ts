@@ -67,7 +67,7 @@
     "author": "CuteWisp <sweatpotato13@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.27.2",
+        "axios": "^1.2.6",
         "cross-fetch": "^3.1.5",
         "dotenv": "^16.0.0",
         "tslib": "^2.3.1"
