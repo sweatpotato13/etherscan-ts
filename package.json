@@ -39,7 +39,6 @@
         "eslint": "^8.9.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-jest": "^27.2.1",
-        "git-branch-is": "^4.0.0",
         "husky": "7.0.4",
         "jest": "^28.1.3",
         "lint-staged": "^13.1.0",
@@ -67,14 +66,9 @@
     "author": "CuteWisp <sweatpotato13@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^1.2.6",
-        "cross-fetch": "^3.1.5",
-        "dotenv": "^16.0.0",
-        "tslib": "^2.3.1"
+        "axios": "^1.3.3",
+        "dotenv": "^16.0.3",
+        "tslib": "^2.5.0"
     },
-    "volta": {
-        "node": "12.18.3",
-        "npm": "6.14.5"
-    },
-    "packageManager": "yarn@3.1.1"
+    "packageManager": "yarn@3.4.1"
 }
