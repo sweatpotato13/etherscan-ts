@@ -48,7 +48,7 @@
         "ts-jest": "^29.0.5",
         "ts-node-dev": "^2.0.0",
         "tsutils": "^3.21.0",
-        "typescript": "^4.9.5"
+        "typescript": "^5.0.2"
     },
     "scripts": {
         "dev": "ts-node-dev src/main.ts --trace-sync-io",
