@@ -5,8 +5,8 @@ import { IResponse } from "src/Interfaces/response.interface";
 export class Etherscan {
     private apiKey: string;
     private apiUrl: string;
-    constructor(apiKey: string) {
-        this.apiUrl = "https://api.etherscan.io/api";
+    constructor(apiKey: string, apiUrl?: string) {
+        this.apiUrl = apiUrl || "https://api.etherscan.io/api";
         this.apiKey = apiKey;
         if (!this.apiKey) {
             throw new Error(`API key is required`);
