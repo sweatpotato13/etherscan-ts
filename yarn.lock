@@ -557,11 +557,11 @@ __metadata:
   linkType: hard
 
 "@commitlint/config-conventional@npm:^18.1.0":
-  version: 18.1.0
-  resolution: "@commitlint/config-conventional@npm:18.1.0"
+  version: 18.4.2
+  resolution: "@commitlint/config-conventional@npm:18.4.2"
   dependencies:
     conventional-changelog-conventionalcommits: ^7.0.2
-  checksum: 1cbb05b52f8e288c977e08453b8add7c3d2802b2c9ec3cbb65cca38ea5e6ebe56a276c0eb5bc81b0d1630ca839ce106b71428f31d6db796860bc63c317250bba
+  checksum: ed4a5c593e5519ccea93ee050c5bbaa642f43ca89b4795929b3be199402d3fd04f2f6651be58441bbbeb49b26158359c2b67d6c08fe4c64d0beb2405d2dd5052
   languageName: node
   linkType: hard
 
