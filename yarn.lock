@@ -2886,9 +2886,9 @@ __metadata:
   linkType: hard
 
 "dotenv@npm:^16.3.1":
-  version: 16.3.2
-  resolution: "dotenv@npm:16.3.2"
-  checksum: 917b27eeb654b95846484009326b1c52af7a7c25f7b09e2939ed49de8f98cb9895dcc04f13a39cdb078d247985e21147311ccb5bfbf2fd151afb20fa8f96de15
+  version: 16.4.4
+  resolution: "dotenv@npm:16.4.4"
+  checksum: fbe0355972634d8843e1804115885e94d70618cfc975eadca67e26b2d71eb46f0ed45c12c2b88fd88cd6b1476a151471227b13311127a3504d10060cc74ce2f7
   languageName: node
   linkType: hard
 
