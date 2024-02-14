@@ -557,11 +557,12 @@ __metadata:
   linkType: hard
 
 "@commitlint/config-conventional@npm:^18.1.0":
-  version: 18.6.0
-  resolution: "@commitlint/config-conventional@npm:18.6.0"
+  version: 18.6.1
+  resolution: "@commitlint/config-conventional@npm:18.6.1"
   dependencies:
+    "@commitlint/types": ^18.6.1
     conventional-changelog-conventionalcommits: ^7.0.2
-  checksum: 96f96966efe2dca58fa876668c3ef34326d617a78bc467bd163a232aec7a541e6da5f462bb76b6dcecf0344bec8f82e02ca89b3b64f60527084289c58bfc9b84
+  checksum: dd415fae3bf8ed805d54aa9b7c6f4b834f5ef0f9b521820f04e3df8d4363bc8d7335297a9ecdca46fd3a14be79a456ebdd02d81f34cb8d8fb4263380a46cadc8
   languageName: node
   linkType: hard
 
@@ -728,6 +729,15 @@ __metadata:
   dependencies:
     chalk: ^4.1.0
   checksum: 52dfc0ee835f3030fff25e45b4568e83eef818126a30f60860637c74de4919c5f9f1eab157622bb70facf9483f07898cfcb47efa484caf6443dd866942e460ec
+  languageName: node
+  linkType: hard
+
+"@commitlint/types@npm:^18.6.1":
+  version: 18.6.1
+  resolution: "@commitlint/types@npm:18.6.1"
+  dependencies:
+    chalk: ^4.1.0
+  checksum: fb37bdefd25e05e353eb568b26a7dd5aff488f1e3fbfc42080bde49ae6834ffde996acac4b7767df650b38e03692889b636b8290465823cd27276662d3b471cf
   languageName: node
   linkType: hard
 
