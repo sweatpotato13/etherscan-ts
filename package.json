@@ -29,7 +29,7 @@
         }
     },
     "devDependencies": {
-        "@commitlint/cli": "^18.0.0",
+        "@commitlint/cli": "^19.2.2",
         "@commitlint/config-conventional": "^19.2.2",
         "@types/jest": "^29.5.3",
         "@types/node": "^20.4",
