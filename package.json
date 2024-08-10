@@ -33,7 +33,7 @@
         "@commitlint/config-conventional": "^19.2.2",
         "@types/jest": "^29.5.12",
         "@types/node": "^22.1",
-        "@typescript-eslint/eslint-plugin": "^7.10.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.1",
         "@typescript-eslint/parser": "^7.10.0",
         "axios-mock-adapter": "^1.22.0",
         "eslint": "^9.4.0",
