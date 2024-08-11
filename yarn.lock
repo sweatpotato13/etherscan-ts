@@ -1422,21 +1422,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 20.14.12
-  resolution: "@types/node@npm:20.14.12"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10/9205bf46ef6a99d99cdde9efeb8218cd15803cc407249c2336557cd630b006380dad68c03ee574934414639f8e450044f45530c92788a8e82078bae45ee40f93
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^22.1":
-  version: 22.1.0
-  resolution: "@types/node@npm:22.1.0"
+"@types/node@npm:*, @types/node@npm:^22.1":
+  version: 22.2.0
+  resolution: "@types/node@npm:22.2.0"
   dependencies:
     undici-types: "npm:~6.13.0"
-  checksum: 10/c2ac1340509646b6c673b27fae2a46e501a97e540e7221be4dd2e0be7a0f61efefb5bf3be8bedf2dbce245fa49cfc49bba77bce73fa3c4296d0d19521ced3222
+  checksum: 10/2957c5c81f1a07a1210f28382adae65c11070c301e395fa819448516f1a2a710054b29e0ec7d8e28624afbcd90dae810403a497109545dea835b554fc76edf6c
   languageName: node
   linkType: hard
 
@@ -7079,13 +7070,6 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 10/bec0240a9394b5532dcda062c597f6a4958b26ecafacdc2d8e63d1d024f0f6c17899505a186b48a39ac0da6e5e5a7261039ff18f767143df77a4e82576cba1fd
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~5.26.4":
-  version: 5.26.5
-  resolution: "undici-types@npm:5.26.5"
-  checksum: 10/0097779d94bc0fd26f0418b3a05472410408877279141ded2bd449167be1aed7ea5b76f756562cb3586a07f251b90799bab22d9019ceba49c037c76445f7cddd
   languageName: node
   linkType: hard
 
